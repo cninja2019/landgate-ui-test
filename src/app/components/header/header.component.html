@@ -1,0 +1,32 @@
+<header>
+  <nav>
+    <div class="navbar d-flex align-items-center">
+      <div class="navbar-logo flex-center c-pointer" routerLink="/home">
+        <img src="/assets/images/LG-mark.png" class="logo" alt="">
+        <img src="/assets/images/landgate.png" class="name ms-2" alt="">
+      </div>
+
+      <div class="flex-center ms-auto c-pointer d-none d-md-flex">
+        <div class="navbar-item" routerLink="/home" routerLinkActive="active">Home</div>
+        <div class="navbar-item" routerLink="/people" routerLinkActive="active">People</div>
+        <div class="navbar-item">About</div>
+        <div class="navbar-item">Blog</div>
+        <div class="navbar-item">Contact</div>
+      </div>
+
+      <button type="button" class="navbar-toggler d-md-none"
+        data-bs-toggle="collapse" data-bs-target="#collapsePan"
+        aria-expanded="false" aria-controls="collapsePan">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+    <div class="collapse text-center d-md-none" id="collapsePan">
+      <div class="collapse-item" routerLink="/home" routerLinkActive="active">Home</div>
+      <div class="collapse-item" routerLink="/people" routerLinkActive="active">People</div>
+      <div class="collapse-item">About</div>
+      <div class="collapse-item">Blog</div>
+      <div class="collapse-item">Contact</div>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,55 @@
+<div class="card m-4">
+  <div class="card-body text-center">
+    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
+      class="rounded-circle img-fluid" style="width: 150px;">
+    <h5 class="my-3">{{person.firstName}} {{person.lastName}}</h5>
+    <p class="text-muted mb-1">{{person.jobTitle}}</p>
+    <p class="text-muted mb-4">Age : {{person.age}}</p>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" [attr.data-bs-target]="'#editModal' + person.id">
+      Edit
+    </button>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" [attr.id]="'editModal' + person.id" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="editModalLabel">Edit Person</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="cancel()"></button>
+      </div>
+
+      <div class="modal-body">
+        <form [formGroup]="personForm" class="was-validated">
+          <div class="mb-3">
+            <label for="firstName" class="col-form-label">First name:</label>
+            <input formControlName="firstName" type="text" class="form-control is-valid" id="firstName" required>
+            <div class="invalid-feedback">Required</div>
+          </div>
+          <div class="mb-3">
+            <label for="lastName" class="col-form-label">Last name:</label>
+            <input formControlName="lastName" type="text" class="form-control is-valid" id="lastName" required>
+            <div class="invalid-feedback">Required</div>
+          </div>
+          <div class="mb-3">
+            <label for="age" class="col-form-label">Age:</label>
+            <input formControlName="age" type="number" [min]="18" [max]="100" step="1" class="form-control is-valid" id="age" required>
+            <div class="invalid-feedback">Min: 18, Max: 100</div>
+          </div>
+          <div class="mb-3">
+            <label for="jobTitle" class="col-form-label">Job title:</label>
+            <input formControlName="jobTitle" type="text" class="form-control is-valid" id="jobTitle" required>
+            <div class="invalid-feedback">Required</div>
+          </div>
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="cancel()">Cancel</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="save()" [disabled]="personForm.invalid">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

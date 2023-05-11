@@ -1,0 +1,22 @@
+h1 {
+  @include headline1;
+}
+
+h2 {
+  @include headline2;
+}
+
+h3 {
+  @include headline3;
+}
+
+h4 {
+  @include headline4;
+}
+
+// Define variable typo style
+// @mixin lg-font($size, $height: normal, $weight: 400, $spacing: normal, $style: normal, $family: Roboto)
+
+// .typo-class {
+//   @include lg-font(17px, 24px, 500, 1px, italic, Montserrat);
+// }

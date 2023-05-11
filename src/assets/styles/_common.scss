@@ -1,0 +1,21 @@
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-pointer {
+  cursor: pointer;
+}
+
+.full-overlay-panel {
+  width: 100%;
+  height: 100vh;
+}
+.primary-backdrop {
+  background: $primary-dark-blue !important;
+  opacity: 0.8 !important;
+}
+.transparent-backdrop {
+  opacity: 0.1 !important;
+}

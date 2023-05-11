@@ -1,0 +1,115 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// headline -----
+@mixin headline {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@mixin headline1 {
+  @include headline;
+  font-size: 64px;
+  line-height: 72px;
+  letter-spacing: -0.01em;
+}
+
+@mixin headline2 {
+  @include headline;
+  font-size: 46px;
+  line-height: 48px;
+  letter-spacing: -0.005em;
+}
+
+@mixin headline3 {
+  @include headline;
+  font-size: 33px;
+  line-height: 40px;
+}
+
+@mixin headline4 {
+  @include headline;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+// Landgate font -----
+@mixin lg-font($size, $height: normal, $weight: 400, $spacing: normal, $style: normal, $family: Roboto) {
+  font-family: $family !important;
+  font-style: $style !important;
+  font-weight: $weight;
+  font-size: $size !important;
+  line-height: $height !important;
+  letter-spacing: $spacing !important;
+}
+
+// TEXT style
+@mixin font-main {
+  @include lg-font(17px, 24px);
+}
+@mixin font-main-bold {
+  @include lg-font(17px, 24px, bold);
+}
+@mixin font-main-italic {
+  @include lg-font(17px, 24px, normal, normal, italic);
+}
+
+@mixin font-lead {
+  @include lg-font(20px, 28px);
+}
+@mixin font-small {
+  @include lg-font(14px, 20px);
+}
+@mixin font-x-small {
+  @include lg-font(10px, 16px, bold);
+}
+
+// Label style
+@mixin label-large {
+  @include lg-font(20px, 22px);
+}
+@mixin label-x-large {
+  @include lg-font(24px, 24px);
+}
+@mixin label-medium {
+  @include lg-font(18px, 18px);
+}
+@mixin label-main {
+  @include lg-font(16px, 16px);
+}
+@mixin label-small {
+  @include lg-font(14px, 14px);
+}
+@mixin label-x-small {
+  @include lg-font(10px, 10px, bold);
+}
+
+// Text as Link
+@mixin primary-text-link {
+  @include lg-font(14px, 20px, bold);
+  color: $accent-red;
+  &:hover {
+    color: $accent-dark-red;
+  }
+}
+@mixin secondary-text-link {
+  @include lg-font(14px, 20px, bold);
+  color: $accent-cyan;
+  &:hover {
+    color: $accent-cyan-muted;
+  }
+}
+
+@mixin nav-link {
+  @include lg-font(16px, 20px, bold, 1px, normal, Montserrat);
+  color: $primary-blue;
+  padding: 0;
+
+  &:hover {
+    color: $primary-dark-blue;
+  }
+}
