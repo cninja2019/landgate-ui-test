@@ -6,6 +6,7 @@ This test project is designed to help us understand your level of web developmen
 
 ### General Instructions
 
+
 It is advised that you read through all the various parts to understand the overall scope and expectations of this project. The instructions are separated into two parts. You will find the generalized expectations in this ReadMe below. 
 You will also find throughout the HTML and Angular code suggested implementation points (these will be noted by a // TODO: with instructions).      
 
